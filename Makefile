@@ -21,7 +21,7 @@ ifeq ($(UNAME), Darwin)
 	nix build --extra-experimental-features nix-command --extra-experimental-features flakes ".#darwinConfigurations.${NIXNAME}.system"
 	./result/sw/bin/darwin-rebuild switch --flake "$$(pwd)#${NIXNAME}"
 else
-	sudo NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nixos-rebuild switch --flake ".#${NIXNAME}"
+	sudo NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nixos-rebuild --option substituters https://mirrors.ustc.edu.cn/nix-channels/store switch --flake ".#${NIXNAME}"
 endif
 
 test:
@@ -113,10 +113,10 @@ vm/copy:
 # have to run vm/copy before.
 vm/switch:
 	ssh $(SSH_OPTIONS) -p$(NIXPORT) $(NIXUSER)@$(NIXADDR) " \
-		sudo NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nixos-rebuild switch --flake \"/nix-config#${NIXNAME}\" \
+		sudo NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nixos-rebuild --option substituters \"https://mirrors.ustc.edu.cn/nix-channels/store\" switch --flake \"/nix-config#${NIXNAME}\" \
 	"
 
 # Build a WSL installer
 .PHONY: wsl
 wsl:
-	 nix build ".#nixosConfigurations.wsl.config.system.build.installer"
+	 nix build --extra-experimental-features nix-command --extra-experimental-features flakes ".#nixosConfigurations.wsl.config.system.build.installer"
