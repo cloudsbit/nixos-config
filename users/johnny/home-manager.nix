@@ -149,8 +149,7 @@ in {
     config = {
       whitelist = {
         prefix= [
-          "$HOME/code/go/src/github.com/hashicorp"
-          "$HOME/code/go/src/github.com/mitchellh"
+          "$HOME/code/go/src/github.com/johnny"
         ];
 
         exact = ["$HOME/.envrc"];
@@ -186,13 +185,13 @@ in {
       signByDefault = true;
     };
     settings = {
-      user.name = "Mitchell Hashimoto";
-      user.email = "m@mitchellh.com";
+      user.name = "Johnny Hu";
+      user.email = "johnnyhu90@gmail.com";
       branch.autosetuprebase = "always";
       color.ui = true;
       core.askPass = ""; # needs to be empty to use terminal for ask pass
       credential.helper = "store"; # want to make this more secure
-      github.user = "mitchellh";
+      github.user = "johnny";
       push.default = "tracking";
       init.defaultBranch = "main";
       aliases = {
@@ -207,7 +206,7 @@ in {
     enable = true;
     env = { 
       GOPATH = "Documents/go";
-      GOPRIVATE = [ "github.com/mitchellh" ];
+      GOPRIVATE = [ "github.com/johnny" ];
     };
   };
 
