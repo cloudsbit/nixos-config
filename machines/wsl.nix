@@ -1,5 +1,6 @@
 { pkgs, currentSystemUser, ... }: {
-  imports = [];
+  imports = [
+  ];
 
   wsl = {
     enable = true;
@@ -9,7 +10,7 @@
   };
 
   nix = {
-    package = pkgs.nixUnstable;
+    package = pkgs.nixVersions.latest;
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
@@ -17,5 +18,5 @@
     '';
   };
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "25.11";
 }

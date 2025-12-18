@@ -77,8 +77,8 @@ in {
     pkgs.gopls
     pkgs.zigpkgs."0.14.0"
 
-    pkgs.claude-code
-    pkgs.codex
+    #pkgs.claude-code
+    #pkgs.codex
 
     # Node is required for Copilot.vim
     pkgs.nodejs

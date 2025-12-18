@@ -19,7 +19,7 @@
     nixpkgs-master.url = "github:nixos/nixpkgs";
 
     # Build a custom WSL installer
-    nixos-wsl.url = "github:nix-community/NixOS-WSL";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
     # snapd
@@ -70,7 +70,7 @@
         gh = inputs.nixpkgs-unstable.legacyPackages.${prev.system}.gh;
 
         # Want the latest version of these
-        claude-code = inputs.nixpkgs-unstable.legacyPackages.${prev.system}.claude-code;
+        #claude-code = inputs.nixpkgs-unstable.legacyPackages.${prev.system}.claude-code;
         nushell = inputs.nixpkgs-unstable.legacyPackages.${prev.system}.nushell;
 
         ibus = ibus_stable;
