@@ -7,6 +7,7 @@
     wslConf.automount.root = "/mnt";
     defaultUser = currentSystemUser;
     startMenuLaunchers = true;
+    interop.register = true;
   };
 
   nix = {
@@ -18,6 +19,8 @@
     '';
   };
 
+  # Set time zone.
   time.timeZone = "Asia/Shanghai";
+
   system.stateVersion = "25.11";
 }
