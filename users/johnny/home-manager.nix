@@ -205,8 +205,7 @@ in {
   programs.go = {
     enable = true;
     env = { 
-      GOPATH = "Documents/go";
-      GOPRIVATE = [ "github.com/johnny" ];
+      GOPRIVATE = [ "github.com/cloudsbit" ];
     };
   };
 
