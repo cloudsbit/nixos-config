@@ -149,7 +149,8 @@ in {
     config = {
       whitelist = {
         prefix= [
-          "$HOME/code/go/src/github.com/johnny"
+          "$HOME/code/go/src/github.com/cloudsbit"
+          "$HOME/code/zig/src/github.com/cloudsbit"
         ];
 
         exact = ["$HOME/.envrc"];
@@ -186,7 +187,7 @@ in {
     };
     settings = {
       user.name = "Johnny Hu";
-      user.email = "johnnyhu90@gmail.com";
+      user.email = "johnnyhu90@hotmail.com";
       branch.autosetuprebase = "always";
       color.ui = true;
       core.askPass = ""; # needs to be empty to use terminal for ask pass
