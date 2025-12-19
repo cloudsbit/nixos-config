@@ -19,8 +19,12 @@
     '';
   };
 
-  # Set time zone.
+  # Set your time zone.
   time.timeZone = "Asia/Shanghai";
+
+  environment.systemPackages = with pkgs; [
+    fastfetch
+  ];
 
   system.stateVersion = "25.11";
 }
