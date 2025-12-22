@@ -26,5 +26,11 @@
     fastfetch
   ];
 
+  environment.variables = {
+    ALL_PROXY = "socks5://127.0.0.1:65000";
+    HTTP_PROXY = "socks5://127.0.0.1:65000";
+    HTTPS_PROXY = "socks5://127.0.0.1:65000";
+  };
+
   system.stateVersion = "25.11";
 }
