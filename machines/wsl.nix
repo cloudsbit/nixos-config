@@ -24,8 +24,12 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
-    gnumake
     kopia
+    gnumake
+    gcc
+    protobuf
+    protoc-gen-go
+    protoc-gen-go-grpc
   ];
 
   environment.variables = {
