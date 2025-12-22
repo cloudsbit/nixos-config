@@ -25,6 +25,7 @@
   environment.systemPackages = with pkgs; [
     fastfetch
     gnumake
+    kopia
   ];
 
   environment.variables = {
