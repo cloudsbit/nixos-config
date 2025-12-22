@@ -83,6 +83,9 @@ set -q PATH; or set PATH ''; set -gx PATH  "$HOME/.local/bin" $PATH;
 #funcsave fish_greeting
 set -g fish_greeting
 
+# Set 24 hours format date
+set -g theme_date_format "+%a %d %b %Y %H:%M:%S %Z"
+
 # bobthefish theme
 set -g theme_color_scheme dracula
 
