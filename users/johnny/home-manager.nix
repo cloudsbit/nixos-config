@@ -182,17 +182,17 @@ in {
   programs.git = {
     enable = true;
     signing = {
-      key = "523D5DC389D273BC";
+      key = "E7AE85673F205DFC";
       signByDefault = true;
     };
     settings = {
-      user.name = "Johnny Hu";
+      user.name = "cloudsbit";
       user.email = "johnnyhu90@hotmail.com";
       branch.autosetuprebase = "always";
       color.ui = true;
       core.askPass = ""; # needs to be empty to use terminal for ask pass
       credential.helper = "store"; # want to make this more secure
-      github.user = "johnny";
+      github.user = "cloudsbit";
       push.default = "tracking";
       init.defaultBranch = "main";
       aliases = {

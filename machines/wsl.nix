@@ -24,6 +24,7 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
+    gnumake
   ];
 
   environment.variables = {
