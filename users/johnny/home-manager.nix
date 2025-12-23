@@ -73,15 +73,24 @@ in {
     pkgs.starship
     pkgs.tree
     pkgs.watch
+    pkgs.fastfetch
 
     pkgs.gopls
     pkgs.zigpkgs."0.14.0"
 
     #pkgs.claude-code
     #pkgs.codex
-
     # Node is required for Copilot.vim
-    pkgs.nodejs
+    #pkgs.nodejs
+
+    pkgs.kopia
+
+    pkgs.gnumake
+    pkgs.gcc
+    pkgs.protobuf
+    pkgs.protoc-gen-go
+    pkgs.protoc-gen-go-grpc
+
   ] ++ (lib.optionals isDarwin [
     # This is automatically setup on Linux
     pkgs.cachix
