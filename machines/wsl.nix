@@ -1,4 +1,4 @@
-{ pkgs, currentSystemUser, ... }: {
+{ pkgs, inputs, currentSystemUser, ... }: {
   imports = [
   ];
 
@@ -27,6 +27,10 @@
     HTTP_PROXY = "socks5://127.0.0.1:65000";
     HTTPS_PROXY = "socks5://127.0.0.1:65000";
   };
+
+  #environment.systemPackages = [
+  #  inputs.gomod2nix.packages.${pkgs.system}.default
+  #];
 
   system.stateVersion = "25.11";
 }
