@@ -214,8 +214,10 @@ in {
 
   programs.go = {
     enable = true;
-    env = { 
-      GOPRIVATE = [ "github.com/cloudsbit" ];
+    env = {
+      GO111MODULE = "on";
+      GOPROXY     = "https://goproxy.cn,direct";
+      GOPRIVATE   = [ "github.com/cloudsbit" ];
     };
   };
 
