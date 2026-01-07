@@ -51,7 +51,7 @@
     zig.url = "github:mitchellh/zig-overlay";
 
     #gomod2nix = {
-    #  url = "github:nix-community/gomod2nix/v1.7.0";
+    #  url = "github:nix-community/gomod2nix";
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
 
