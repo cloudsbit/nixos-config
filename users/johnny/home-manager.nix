@@ -74,6 +74,8 @@ in {
     pkgs.tree
     pkgs.watch
     pkgs.fastfetch
+    pkgs.zip
+    pkgs.unzip
 
     pkgs.gopls
     pkgs.zigpkgs."0.15.2"
