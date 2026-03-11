@@ -19,7 +19,7 @@
     nixpkgs-master.url = "github:nixos/nixpkgs";
 
     # Build a custom WSL installer
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL";
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
     # snapd
@@ -27,10 +27,7 @@
     nix-snapd.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager = {
-      # We need to use nightly home-manager because it contains this
-      # fix we need for nushell nightly:
-      # https://github.com/nix-community/home-manager/commit/a69ebd97025969679de9f930958accbe39b4c705
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
