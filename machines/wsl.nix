@@ -34,9 +34,9 @@
   #  inputs.gomod2nix.packages.${pkgs.system}.default
   #];
 
-  environment.systemPackages = [
-    inputs.nullclaw.packages.${pkgs.system}.default
-  ];
+  #environment.systemPackages = [
+  #  inputs.nullclaw.packages.${pkgs.system}.default
+  #];
 
 
   system.stateVersion = "25.11";

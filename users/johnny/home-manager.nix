@@ -76,6 +76,7 @@ in {
     pkgs.fastfetch
     pkgs.zip
     pkgs.unzip
+    pkgs.nmap # ncat in it
 
     pkgs.gopls
     pkgs.zigpkgs."0.15.2"
@@ -190,8 +191,23 @@ in {
     ];
   };
 
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      Host github.com
+          HostName ssh.github.com
+          Port 443
+          User git
+          ProxyCommand ncat --proxy 127.0.0.1:65000 --proxy-type socks5 %h %p
+    '';
+  };
   programs.git = {
     enable = true;
+    extraConfig  = {
+      init.defaultBranch = "main";
+      http.proxy = "socks5h://127.0.0.1:65000";
+      https.proxy = "socks5h://127.0.0.1:65000";
+    };
     signing = {
       key = "E7AE85673F205DFC";
       signByDefault = true;
