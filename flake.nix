@@ -40,7 +40,9 @@
     # used by neovim but recently I had failures if I didn't pin to my
     # own. We can always try to remove that anytime.
     neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
+      url = "github:nix-community/neovim-nightly-overlay/9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1";
+      #rev = "9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1";
+      #narHash = "sha256-LocQzkSjVS4G0AKMBiEIVdBKCNTMZXQFjQMWFId4Jpg=";
     };
 
     # Other packages
