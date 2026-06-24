@@ -38,6 +38,5 @@
   #  inputs.nullclaw.packages.${pkgs.system}.default
   #];
 
-
   system.stateVersion = "25.11";
 }

@@ -79,7 +79,7 @@ in {
     pkgs.nmap # ncat in it
 
     pkgs.gopls
-    pkgs.zigpkgs."0.15.2"
+    pkgs.zigpkgs."0.16.0"
 
     #pkgs.claude-code
     #pkgs.codex
